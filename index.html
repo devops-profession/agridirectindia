@@ -1,133 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Agri Direct India — Precision Agriculture Drone Spraying</title>
-  <meta name="description" content="Drone spraying services for precision agriculture: faster, safer, uniform application across crops. Book certified pilots across Tamil Nadu & beyond." />
+  <meta name="description"
+    content="Drone spraying services for precision agriculture: faster, safer, uniform application across crops. Book certified pilots across Tamil Nadu & beyond." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b1a10;          /* deep green-black */
-      --card:#0f2416;        /* card green */
-      --muted:#9fb8a6;       /* muted text */
-      --text:#ecf6ef;        /* main text */
-      --brand:#69d26d;       /* accent green */
-      --brand-2:#b1ffb4;     /* light accent */
-      --warn:#ffd166;        /* amber for highlights */
-      --max:1200px;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.02);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;color:var(--text);background:var(--bg);font-family:Outfit, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(100%, var(--max));margin-inline:auto;padding:clamp(16px,2vw,24px)}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,26,16,.85), rgba(11,26,16,.55));backdrop-filter: blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.4px}
-    .logo-mark{width:36px;height:36px;border-radius:12px;background:conic-gradient(from 210deg, var(--brand), var(--brand-2));display:grid;place-items:center;box-shadow:var(--shadow)}
-    .logo-mark svg{filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))}
-    nav a{opacity:.9}
-    .nav-links{display:flex;gap:18px;align-items:center}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));box-shadow:var(--shadow);transition:transform .15s ease, border-color .2s ease, background .2s ease}
-    .btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.2)}
-    .btn.brand{background:linear-gradient(180deg, rgba(105,210,109,.9), rgba(105,210,109,.65));color:#0b1a10;border-color:transparent}
-
-    /* Hero */
-    .hero{padding:48px 0 24px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .row-grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
-    .eyebrow{color:var(--brand-2);text-transform:uppercase;font-weight:600;letter-spacing:.18em;font-size:.9rem}
-    h1{font-size:clamp(32px,5vw,56px);line-height:1.05;margin:12px 0 10px}
-    .lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:58ch}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .hero-card{position:relative;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:18px;box-shadow:var(--shadow)}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .tag{font-size:.85rem;color:#0b1a10;background:var(--brand-2);border-radius:999px;padding:8px 12px}
-
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
-    .stat{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px;text-align:center}
-    .stat b{font-size:clamp(22px,3vw,28px)}
-    .stat p{margin:6px 0 0;color:var(--muted);font-size:.95rem}
-
-    /* Sections */
-    section{padding:56px 0;background:radial-gradient(1200px 600px at 80% -10%, rgba(105,210,109,.15), transparent 60%),
-               radial-gradient(800px 400px at 10% -10%, rgba(177,255,180,.12), transparent 60%), var(--bg);}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px}
-    h2{font-size:clamp(24px,3.6vw,36px);margin:0}
-    .sub{color:var(--muted)}
-
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .card h3{margin:4px 0 8px}
-    .card p{color:var(--muted)}
-
-    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-
-    /* Timeline */
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:step}
-    .step{position:relative;padding:18px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08)}
-    .step::before{counter-increment:step;content:counter(step);position:absolute;top:12px;left:12px;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--brand);color:#0b1a10;font-weight:700}
-
-    /* Pricing */
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .price{padding:20px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08)}
-    .price .title{font-weight:700;font-size:1.1rem;margin-bottom:4px}
-    .price .amt{font-size:32px;font-weight:700}
-    .price ul{margin:10px 0;padding-left:18px;color:var(--muted)}
-
-    /* FAQ */
-    details{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px}
-    details+details{margin-top:10px}
-    summary{cursor:pointer;font-weight:600}
-    summary::-webkit-details-marker{display:none}
-
-    /* Contact */
-    form{display:grid;gap:12px}
-    input,textarea{width:100%;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)}
-
-    /* Footer */
-    footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width: 1000px){
-      .hero-grid,.row-grid-2{grid-template-columns:1fr}
-      .features,.grid-4,.grid-3,.pricing,.steps{grid-template-columns:1fr 1fr}
-      .stats{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 640px){
-      .nav-links{display:none}
-      .features,.grid-4,.grid-3,.pricing,.steps{grid-template-columns:1fr}
-    }
-  </style>
+  <!-- Icons for cards -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <!-- Header -->
   <header>
     <div class="container nav">
-      <a class="logo" href="#">
-        <img src="logo.png" alt="Agri Direct India" width="60">
-        <div>
-          <h2>Agri Direct India</h2>
-          <span class="sub">Sustainable Farming Innovation</span>
-        </div>
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="./assets/logo.jpeg" alt="">
+        Agri Direct India
       </a>
       <nav class="nav-links">
-        <a href="#about">About Us</a>
+        <!-- Added About link (no other nav changes) -->
+        <a href="./aboutUs.html">About</a>
         <a href="#services">Services</a>
         <a href="#solutions">Solutions</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact" class="btn">Contact</a>
-        <a href="#book" class="btn brand">Book a Spray</a>
+        <a href="#contact" class="btn brand">Book a Spray</a>
       </nav>
     </div>
   </header>
@@ -137,89 +41,47 @@
     <div class="container hero-grid">
       <div>
         <div class="eyebrow">Faster • Safer • Precise</div>
-        <h1>Precision Agriculture Drone Spraying</h1>
-        <p class="lead">Faster, safer, and cost-effective crop protection powered by smart drones. Cover more acres per day with pinpoint accuracy and minimal water usage.</p>
+        <h1>Precision agriculture drone spraying for every acre.</h1>
+        <p class="lead">Cover an acre in minutes, reduce chemical use, and protect your team from exposure. Our
+          certified pilots deliver uniform spraying across paddy, sugarcane, cotton, and more.</p>
         <div class="cta">
-          <a class="btn brand" href="#book">Book now</a>
-          <a class="btn" href="#pricing">Get Pricing</a>
+          <a class="btn brand" href="#contact">Book a Spray</a>
+          <a class="btn" href="#pricing">See Pricing</a>
         </div>
         <div class="tags">
-          <span class="tag">Certified Operations</span>
-          <span class="tag">Licensed</span>
-          <span class="tag">Insured</span>
+          <span class="tag">DGCA-certified pilots</span>
+          <span class="tag">Uniform droplet size</span>
+          <span class="tag">Terrain friendly</span>
         </div>
-        <h4>Trusted by Farmers Across India</h4>
         <div class="stats">
-          <div class="stat"><b>10,000+</b><p>Acres Sprayed</p></div>
-          <div class="stat"><b>500+</b><p>Happy Farmers</p></div>
-          <div class="stat"><b>4+</b><p>Years</p></div>
-          <div class="stat"><b>15+</b><p>States Covered</p></div>
+          <div class="stat"><b>8–10 min</b>
+            <p>per acre</p>
+          </div>
+          <div class="stat"><b>30%↓</b>
+            <p>chemical usage</p>
+          </div>
+          <div class="stat"><b>90%↓</b>
+            <p>water usage</p>
+          </div>
+          <div class="stat"><b>100%</b>
+            <p>operator safety</p>
+          </div>
         </div>
-        <p class="sub">Our numbers speak for our commitment to excellence</p>
       </div>
       <div class="hero-card">
-        <img src="hero.webp" alt="Agriculture drone spraying over field" style="border-radius:14px; aspect-ratio:16/11; object-fit:cover;">
+        <img src="./assets/heroImage1.png" alt="Agriculture drone spraying over field"
+          style="border-radius:14px; aspect-ratio:16/11; object-fit:cover;">
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
           <div class="card" style="flex:1;min-width:220px">
+            <div class="icon" aria-hidden="true"><i class="fa-solid fa-wheat-awn"></i></div>
             <strong>Supported Crops</strong>
-            <p class="sub">Paddy • Sugarcane • Cotton • Maize • Millets • Banana</p>
+            <p class="sub">Paddy • Sugarcane • Cotton • Maize • Millets • Banana • Vegetable • Coffee • FruitTrees</p>
           </div>
           <div class="card" style="flex:1;min-width:220px">
+            <div class="icon" aria-hidden="true"><i class="fa-solid fa-spray-can"></i></div>
             <strong>Applications</strong>
             <p class="sub">Herbicide • Pesticide • Foliar feed • Nano urea • Direct seeding</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <div class="container">      
-      <div class="section-title">
-        <h2>About Us</h2>
-        <p class="sub">Our Journey Since 2020</p>
-      </div>
-      <div class="row-grid-2">
-        <img src="about.webp" alt="Agriculture drone spraying over field" style="border-radius:14px; aspect-ratio:1/1; object-fit:cover;">
-        <div>
-          <p>Founded in 2020, Agri Direct India emerged with a clear mission: to bridge the gap between modern agricultural technology and traditional farming practices. We recognized the immense potential of drone technology in revolutionizing crop protection and decided to make it accessible to farmers across India.</p>
-          <p>What started as a vision to help farmers adopt precision agriculture has grown into a comprehensive agricultural technology company. We've successfully completed thousands of spraying operations, helping farmers increase their yields while reducing costs and environmental impact.</p>
-          <p>Today, we operate across multiple states in India, serving diverse agricultural communities with our advanced drone spraying services and agricultural expertise.</p>
-          <div class="grid-2">
-            <div class="card">
-              <h3>Our Mission</h3>
-              <p>To bridge agriculture and farmers through innovative technology solutions, making precision agriculture accessible, affordable, and sustainable for farming communities across India.</p>
-            </div>
-            <div class="card">
-              <h3>Our Vision</h3>
-              <p>To become India's leading agricultural technology company, empowering farmers with cutting-edge solutions that enhance productivity while preserving environmental sustainability.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="section-title" style="margin-top:26px">
-        <h2>Our Core Values</h2>
-        <p class="sub">The principles that guide everything we do</p>
-      </div>
-      <div class="grid-4">
-        <div class="card">
-          <h3>Innovation</h3>
-          <p>Continuously adopting cutting-edge technology to serve farmers better</p>
-        </div>
-        <div class="card">
-          <h3>Partnership</h3>
-          <p>Building lasting relationships with farmers and agricultural communities</p>
-        </div>
-        <div class="card">
-          <h3>Excellence</h3>
-          <p>Delivering superior quality services with precision and reliability</p>
-        </div>
-        <div class="card">
-          <h3>Sustainability</h3>
-          <p>Promoting eco-friendly farming practices for a better tomorrow</p>
         </div>
       </div>
     </div>
@@ -229,52 +91,56 @@
   <section id="services">
     <div class="container">
       <div class="section-title">
-        <h2>Our Services</h2>
-        <p class="sub">Comprehensive drone spraying solutions for modern agriculture</p>
+        <h2>Services</h2>
+        <p class="sub">End-to-end drone spraying, mapping & crop intelligence.</p>
       </div>
       <div class="features">
         <div class="card">
-          <h3>Crop Protection Spraying</h3>
-          <p>Professional application of pesticides, fungicides, and foliar treatments with precision accuracy.</p>
-          <h4>Service Includes:</h4>
-          <ul>
-            <li>Pesticide application</li>
-            <li>Fungicide treatments</li>
-            <li>Foliar spray applications</li>
-            <li>Integrated pest management</li>
-            <li>Disease prevention programs</li>
-          </ul>
+          <div class="icon" aria-hidden="true"><i class="fa-solid fa-spray-can"></i></div>
+          <h3>Spray-as-a-Service</h3>
+          <p>On-demand pilots with 10–20L agri drones for uniform coverage, adjustable flow rate, and GPS-guided flight
+            paths.</p>
         </div>
         <div class="card">
-          <h3>Liquid Fertilizer Application</h3>
-          <p>Efficient application of liquid fertilizers and micronutrients for enhanced crop nutrition.</p>
-          <h4>Service Includes:</h4>
-          <ul>
-            <li>Liquid fertilizer spraying</li>
-            <li>Micronutrient application</li>
-            <li>Growth promoter treatments</li>
-            <li>Nutrient deficiency correction</li>
-            <li>Customized nutrition programs</li>
-          </ul>
+          <div class="icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Prescription Spraying</h3>
+          <p>NDVI-informed variable rate spraying to target only stressed zones, saving inputs while boosting yield.</p>
         </div>
         <div class="card">
-          <h3>Field Mapping & Monitoring</h3>
-          <p>Advanced field mapping and crop health monitoring using cutting-edge drone technology.</p>
-          <h4>Service Includes:</h4>
-          <ul>
-            <li>High-resolution field mapping</li>
-            <li>Crop health assessment</li>
-            <li>Growth pattern analysis</li>
-            <li>Yield prediction modeling</li>
-            <li>Problem area identification</li>
-          </ul>
+          <div class="icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Soil & Leaf Advisory</h3>
+          <p>Partner agronomists for dosage plans: herbicide windows, pest thresholds, and nutrition schedules.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Stats -->
+  <section class="stats-section">
+    <h2>Trusted by Farmers Across India</h2>
+    <p class="subheading">Our numbers speak for our commitment to excellence</p>
+
+    <div class="stats-container">
+      <div class="stat">
+        <h3>35,000+</h3>
+        <p>Acres Sprayed</p>
+      </div>
+      <div class="stat">
+        <h3>1500+</h3>
+        <p>Happy Farmers</p>
+      </div>
+      <div class="stat">
+        <h3>4+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat">
+        <h3>15+</h3>
+        <p>States Covered</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Solutions -->
-  <!--
   <section id="solutions">
     <div class="container">
       <div class="section-title">
@@ -283,14 +149,17 @@
       </div>
       <div class="grid-3">
         <div class="card">
+          <div class="icon" aria-hidden="true"><i class="fa-solid fa-droplet"></i></div>
           <h3>Uniform Application</h3>
           <p>Consistent droplet size with downward wash reduces drift and misses compared to knapsack or boom.</p>
         </div>
         <div class="card">
+          <div class="icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></div>
           <h3>Time & Labour</h3>
           <p>1 acre in under 10 minutes; minimal labour dependency during peak season.</p>
         </div>
         <div class="card">
+          <div class="icon" aria-hidden="true"><i class="fa-solid fa-shield-heart"></i></div>
           <h3>Safety First</h3>
           <p>Zero chemical contact for farmers; ideal for flooded or hilly terrain where foot access is risky.</p>
         </div>
@@ -301,17 +170,27 @@
         <p class="sub">Four quick steps from booking to proof of work.</p>
       </div>
       <div class="steps">
-        <div class="step"><h3>Survey</h3><p class="sub">We map the field, set boundaries and flight lines.</p></div>
-        <div class="step"><h3>Mix</h3><p class="sub">We prepare chemical as per agronomist dosage.</p></div>
-        <div class="step"><h3>Spray</h3><p class="sub">GPS‑guided passes ensure uniform coverage.</p></div>
-        <div class="step"><h3>Report</h3><p class="sub">Job log & acreage covered shared on completion.</p></div>
+        <div class="step">
+          <h3>Survey</h3>
+          <p class="sub">We map the field, set boundaries and flight lines.</p>
+        </div>
+        <div class="step">
+          <h3>Mix</h3>
+          <p class="sub">We prepare chemical as per agronomist dosage.</p>
+        </div>
+        <div class="step">
+          <h3>Spray</h3>
+          <p class="sub">GPS-guided passes ensure uniform coverage.</p>
+        </div>
+        <div class="step">
+          <h3>Report</h3>
+          <p class="sub">Job log & acreage covered shared on completion.</p>
+        </div>
       </div>
     </div>
   </section>
-  -->
 
   <!-- Pricing -->
-  <!--
   <section id="pricing">
     <div class="container">
       <div class="section-title">
@@ -327,7 +206,7 @@
             <li>Operator + helper</li>
             <li>Up to 25 acres/day</li>
           </ul>
-          <a class="btn brand" href="#book">Book Now</a>
+          <a class="btn brand" href="#contact">Book Now</a>
         </div>
         <div class="price" style="outline:2px solid var(--brand);outline-offset:2px">
           <div class="title">Pro (Most Popular)</div>
@@ -337,10 +216,10 @@
             <li>Prescription spraying</li>
             <li>30–40 acres/day</li>
           </ul>
-          <a class="btn brand" href="#book">Book Now</a>
+          <a class="btn brand" href="#contact">Book Now</a>
         </div>
         <div class="price">
-          <div class="title">Mapping Add‑on</div>
+          <div class="title">Mapping Add-on</div>
           <div class="amt">₹200 / acre</div>
           <ul>
             <li>NDVI / RGB maps</li>
@@ -352,10 +231,8 @@
       </div>
     </div>
   </section>
-  -->
 
   <!-- Testimonials -->
-  <!--
   <section>
     <div class="container">
       <div class="section-title">
@@ -363,16 +240,24 @@
         <p class="sub">Real words from the field.</p>
       </div>
       <div class="grid-3">
-        <div class="card"><p>“We finished 30 acres in one morning. Uniform spray and no skin irritation. Booked again for harvest prep.”</p><p class="sub">— Senthil, Erode</p></div>
-        <div class="card"><p>“Cotton whiteflies under control in 2 rounds; chemicals used were noticeably less than last year.”</p><p class="sub">— Priya, Tiruppur</p></div>
-        <div class="card"><p>“Drone handled water‑logged paddy where labour refused to enter. Total lifesaver.”</p><p class="sub">— Murugan, Thanjavur</p></div>
+        <div class="card">
+          <p>“We finished 30 acres in one morning. Uniform spray and no skin irritation. Booked again for harvest prep.”
+          </p>
+          <p class="sub">— Senthil, Erode</p>
+        </div>
+        <div class="card">
+          <p>“Cotton whiteflies under control in 2 rounds; chemicals used were noticeably less than last year.”</p>
+          <p class="sub">— Priya, Tiruppur</p>
+        </div>
+        <div class="card">
+          <p>“Drone handled water-logged paddy where labour refused to enter. Total lifesaver.”</p>
+          <p class="sub">— Murugan, Thanjavur</p>
+        </div>
       </div>
     </div>
   </section>
-  -->
 
   <!-- FAQ -->
-  <!--
   <section id="faq">
     <div class="container">
       <div class="section-title">
@@ -381,7 +266,8 @@
       </div>
       <details>
         <summary>What chemicals can you spray?</summary>
-        <p class="sub">Most foliar fertilizers, herbicides, and pesticides approved for aerial application. We verify label directions before use.</p>
+        <p class="sub">Most foliar fertilizers, herbicides, and pesticides approved for aerial application. We verify
+          label directions before use.</p>
       </details>
       <details>
         <summary>How many acres can you cover per day?</summary>
@@ -393,29 +279,151 @@
       </details>
     </div>
   </section>
-  -->
 
   <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="section-title">
-        <h2>Get in touch</h2>
+        <h2>Book a Field Visit</h2>
         <p class="sub">Tell us your crop, acres, and location. We’ll confirm your slot.</p>
       </div>
-      <div class="row-grid-2">
-        <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you shortly.'); this.reset();">
-          <input required placeholder="Your Name"/>
-          <input required type="tel" placeholder="Phone (WhatsApp)"/>
-          <input placeholder="Village / District"/>
-          <input placeholder="Crop & Acres"/>
-          <textarea rows="4" placeholder="Any notes (weed/pest, stage, preferred date)"></textarea>
+      <div class="grid-2">
+        <!-- Updated form -->
+        <form action="https://formsubmit.co/agridirectofficial@gmail.com" method="POST">
+
+          <!-- Hidden settings for FormSubmit -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <!-- <input type="hidden" name="_next" value="https://agridirect.in/thankyou.html"> -->
+
+          <!-- Hidden input to store role -->
+          <input type="hidden" name="role" id="selectedRole" value="farmer">
+
+          <div class="role-toggle" role="group" aria-label="Select role">
+            <button type="button" class="btn role active" data-role="farmer">Farmer</button>
+            <button type="button" class="btn role" data-role="drone">Drone Partner</button>
+            <button type="button" class="btn role" data-role="business">Events</button>
+          </div>
+
+          <input required name="name" placeholder="Your Name" />
+          <input required name="phone" type="tel" placeholder="Phone (WhatsApp)" />
+          <input name="district" placeholder="Location" />
+
+          <div id="farmerFields" class="dyn-fields">
+            <input style="margin-bottom: 10px;" name="acres" placeholder="No. of acres" />
+            <select name="requirements" required>
+              <option value="">-- Select Requirement --</option>
+              <option value="Spraying">Spraying</option>
+              <option value="Seeding">Seeding</option>
+              <option value="Fertilizer Application">Fertilizer Application</option>
+            </select>
+          </div>
+
+          <div id="droneFields" class="dyn-fields hidden">
+            <input name="no_of_drones" placeholder="No. of drones" />
+          </div>
+
+          <div id="businessFields" class="dyn-fields hidden">
+            <select style="margin-bottom: 10px;" id="eventType" name="eventType">
+              <option value="">-- Select Event --</option>
+              <option value="political">Political Events</option>
+              <option value="temple">Temple Functions</option>
+              <option value="marriage">Marriage Events</option>
+            </select>
+
+            <select id="subEventType" name="subEventType">
+              <option value="">-- Select Sub Event --</option>
+            </select>
+          </div>
+
           <button class="btn brand" type="submit">Request Callback</button>
         </form>
+
+        <script>
+          (function () {
+            const buttons = document.querySelectorAll('.role-toggle .role');
+            const farmer = document.getElementById('farmerFields');
+            const drone = document.getElementById('droneFields');
+            const business = document.getElementById('businessFields');
+            const hiddenRole = document.getElementById('selectedRole');
+
+            // utility to toggle required attributes inside a container
+            function toggleRequired(container, enable) {
+              const inputs = container.querySelectorAll('input, select, textarea');
+              inputs.forEach(el => {
+                if (enable) {
+                  if (el.dataset.wasRequired === "true") el.required = true;
+                } else {
+                  if (el.required) el.dataset.wasRequired = "true";
+                  el.required = false;
+                }
+              });
+            }
+
+            function setRole(role) {
+              buttons.forEach(b => b.classList.remove('active'));
+              document.querySelector(`.role-toggle .role[data-role="${role}"]`).classList.add('active');
+
+              hiddenRole.value = role;
+
+              // hide all
+              farmer.classList.add('hidden');
+              drone.classList.add('hidden');
+              business.classList.add('hidden');
+              toggleRequired(farmer, false);
+              toggleRequired(drone, false);
+              toggleRequired(business, false);
+
+              // show & enable required for selected
+              if (role === 'farmer') {
+                farmer.classList.remove('hidden');
+                toggleRequired(farmer, true);
+              }
+              if (role === 'drone') {
+                drone.classList.remove('hidden');
+                toggleRequired(drone, true);
+              }
+              if (role === 'business') {
+                business.classList.remove('hidden');
+                toggleRequired(business, true);
+              }
+            }
+
+            buttons.forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
+            setRole('farmer'); // default
+          })();
+
+          // Sub-event dropdown logic
+          (function () {
+            const eventType = document.getElementById('eventType');
+            const subEventType = document.getElementById('subEventType');
+
+            const subEvents = {
+              political: ["Banner Lifting", "Flower Dropping", "Both"],
+              temple: ["Flower Dropping", "Spraying Service", "Both"],
+              marriage: ["Banner Lifting", "Flower Dropping", "Both"]
+            };
+
+            eventType.addEventListener('change', () => {
+              const selected = eventType.value;
+              subEventType.innerHTML = '<option value="">-- Select Sub Event --</option>';
+              if (subEvents[selected]) {
+                subEvents[selected].forEach(sub => {
+                  const opt = document.createElement('option');
+                  opt.value = sub.toLowerCase().replace(/\s+/g, "_");
+                  opt.textContent = sub;
+                  subEventType.appendChild(opt);
+                });
+              }
+            });
+          })();
+        </script>
+
         <div class="card">
           <h3>Contact</h3>
-          <p class="sub">Selva Bharathi<br>📞 73393 56903<br>✉️ hello@agridirect.in</p>
+          <p class="sub">KARTHICK SELVARAJ<br>📞 63834 37773<br>✉️ contact@agridirect.com</p>
           <h3 style="margin-top:12px">Service Areas</h3>
-          <p class="sub">Tamil Nadu • Kerala • Karnataka (select districts)</p>
+          <p class="sub">Tamil Nadu • Kerala • Karnataka • AndraPradesh</p>
           <h3 style="margin-top:12px">Working Hours</h3>
           <p class="sub">7:00 AM – 7:00 PM, All days</p>
         </div>
@@ -423,16 +431,84 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
-      <div>© <span id="y"></span> Agri Direct India. All rights reserved. | Established 2020</div>
-      <div><a href="#">Privacy</a> | <a href="#">Terms</a></div>
+
+
+  <!-- Popup on load -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <img style="border-radius: 10px;" src="./assets/farmerPopUp.jpg" alt="">
+      <h3>Need any details?</h3>
+      <p>Feel free to reach out to us for any inquiries or details you might need. We're here to help you!</p>
+      <button class="btn brand" id="connectBtn">Connect with us</button>
+      <button class="btn" id="closePopup" aria-label="Close">Close</button>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <!-- CTA Section -->
+    <h2>Unlock your farming potential.<br>Begin your journey now!</h2>
+    <a href="#contact" class="cta-button">Get A Callback</a>
+
+    <!-- Footer Content (Split into two columns) -->
+    <div class="footer-main">
+      <!-- Left Section -->
+      <div class="footer-left">
+        <!-- Logo -->
+
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#">Farmers</a>
+          <a href="#">Drone Partner</a>
+          <a href="#">About</a>
+        </div>
+
+        <!-- Policy Links -->
+        <div class="footer-policies">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Refund and Cancellation Policy</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Section (Google Map) -->
+      <div class="footer-right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.7677276875947!2d77.68300117480214!3d10.593561689544286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9ef002fa25faf%3A0x4126bb057c981f8d!2sAgri%20direct%20india!5e1!3m2!1sen!2sin!4v1756117334075!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      © Copyright 2025, All Rights Reserved
     </div>
   </footer>
 
+
   <script>
+    // Modal: show on load
+    window.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('popup');
+      const connect = document.getElementById('connectBtn');
+      const closeBtn = document.getElementById('closePopup');
+      if (modal) { modal.style.display = 'flex'; }
+      function go() { modal.style.display = 'none'; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }
+      connect && connect.addEventListener('click', go);
+      closeBtn && closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    });
+
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
