@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agri Direct India — Precision Agriculture Drone Spraying</title>
   <meta name="description"
     content="Drone spraying services for precision agriculture: faster, safer, uniform application across crops. Book certified pilots across Tamil Nadu & beyond." />
+  <title>Agri Direct India — Precision Agriculture Drone Spraying</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -169,6 +170,29 @@
         <h2>How it works</h2>
         <p class="sub">Four quick steps from booking to proof of work.</p>
       </div>
+      <div class="grid-4 how-it-works">
+        <div class="card">
+          <img src="./assets/Survey.png" alt="Agriculture drone spraying over field">
+          <h3>Survey</h3>
+          <p>We map the field, set boundaries and flight lines.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/mix.png" alt="Agriculture drone spraying over field">
+          <h3>Mix</h3>
+          <p>We prepare chemical as per agronomist dosage.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/drone.png" alt="Agriculture drone spraying over field">
+          <h3>Spray</h3>
+          <p>GPS-guided passes ensure uniform coverage.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/report.png" alt="Agriculture drone spraying over field">
+          <h3>Report</h3>
+          <p>Job log & acreage covered shared on completion.</p>
+        </div>
+      </div>
+<!--
       <div class="steps">
         <div class="step">
           <h3>Survey</h3>
@@ -187,6 +211,7 @@
           <p class="sub">Job log & acreage covered shared on completion.</p>
         </div>
       </div>
+-->
     </div>
   </section>
 
@@ -288,145 +313,153 @@
         <p class="sub">Tell us your crop, acres, and location. We’ll confirm your slot.</p>
       </div>
       <div class="grid-2">
-        <!-- Updated form -->
-        <form action="https://formsubmit.co/agridirectofficial@gmail.com" method="POST">
+        <div class="contact-form">
+          <!-- Updated form -->
+          <form action="https://formsubmit.co/agridirectofficial@gmail.com" method="POST">
 
-          <!-- Hidden settings for FormSubmit -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <!-- <input type="hidden" name="_next" value="https://agridirect.in/thankyou.html"> -->
+            <!-- Hidden settings for FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <!-- <input type="hidden" name="_next" value="https://agridirect.in/thankyou.html"> -->
 
-          <!-- Hidden input to store role -->
-          <input type="hidden" name="role" id="selectedRole" value="farmer">
+            <!-- Hidden input to store role -->
+            <input type="hidden" name="role" id="selectedRole" value="farmer">
 
-          <div class="role-toggle" role="group" aria-label="Select role">
-            <button type="button" class="btn role active" data-role="farmer">Farmer</button>
-            <button type="button" class="btn role" data-role="drone">Drone Partner</button>
-            <button type="button" class="btn role" data-role="business">Events</button>
-          </div>
+            <div class="role-toggle" role="group" aria-label="Select role">
+              <button type="button" class="btn role active" data-role="farmer">Farmer</button>
+              <button type="button" class="btn role" data-role="drone">Drone Partner</button>
+              <button type="button" class="btn role" data-role="business">Events</button>
+            </div>
 
-          <input required name="name" placeholder="Your Name" />
-          <input required name="phone" type="tel" placeholder="Phone (WhatsApp)" />
-          <input name="district" placeholder="Location" />
+            <input required name="name" placeholder="Your Name" />
+            <input required name="phone" type="tel" placeholder="Phone (WhatsApp)" />
+            <input name="district" placeholder="Location" />
 
-          <div id="farmerFields" class="dyn-fields">
-            <input style="margin-bottom: 10px;" name="acres" placeholder="No. of acres" />
-            <select name="requirements" required>
-              <option value="">-- Select Requirement --</option>
-              <option value="Spraying">Spraying</option>
-              <option value="Seeding">Seeding</option>
-              <option value="Fertilizer Application">Fertilizer Application</option>
-            </select>
-          </div>
+            <div id="farmerFields" class="dyn-fields">
+              <input style="margin-bottom: 10px;" name="acres" placeholder="No. of acres" />
+              <select name="requirements" required>
+                <option value="">-- Select Requirement --</option>
+                <option value="Spraying">Spraying</option>
+                <option value="Seeding">Seeding</option>
+                <option value="Fertilizer Application">Fertilizer Application</option>
+              </select>
+            </div>
 
-          <div id="droneFields" class="dyn-fields hidden">
-            <input name="no_of_drones" placeholder="No. of drones" />
-          </div>
+            <div id="droneFields" class="dyn-fields hidden">
+              <input name="no_of_drones" placeholder="No. of drones" />
+            </div>
 
-          <div id="businessFields" class="dyn-fields hidden">
-            <select style="margin-bottom: 10px;" id="eventType" name="eventType">
-              <option value="">-- Select Event --</option>
-              <option value="political">Political Events</option>
-              <option value="temple">Temple Functions</option>
-              <option value="marriage">Marriage Events</option>
-            </select>
+            <div id="businessFields" class="dyn-fields hidden">
+              <select style="margin-bottom: 10px;" id="eventType" name="eventType">
+                <option value="">-- Select Event --</option>
+                <option value="political">Political Events</option>
+                <option value="temple">Temple Functions</option>
+                <option value="marriage">Marriage Events</option>
+              </select>
 
-            <select id="subEventType" name="subEventType">
-              <option value="">-- Select Sub Event --</option>
-            </select>
-          </div>
+              <select id="subEventType" name="subEventType">
+                <option value="">-- Select Sub Event --</option>
+              </select>
+            </div>
 
-          <button class="btn brand" type="submit">Request Callback</button>
-        </form>
+            <button class="btn brand" type="submit">Request Callback</button>
+          </form>
 
-        <script>
-          (function () {
-            const buttons = document.querySelectorAll('.role-toggle .role');
-            const farmer = document.getElementById('farmerFields');
-            const drone = document.getElementById('droneFields');
-            const business = document.getElementById('businessFields');
-            const hiddenRole = document.getElementById('selectedRole');
+          <script>
+            (function () {
+              const buttons = document.querySelectorAll('.role-toggle .role');
+              const farmer = document.getElementById('farmerFields');
+              const drone = document.getElementById('droneFields');
+              const business = document.getElementById('businessFields');
+              const hiddenRole = document.getElementById('selectedRole');
 
-            // utility to toggle required attributes inside a container
-            function toggleRequired(container, enable) {
-              const inputs = container.querySelectorAll('input, select, textarea');
-              inputs.forEach(el => {
-                if (enable) {
-                  if (el.dataset.wasRequired === "true") el.required = true;
-                } else {
-                  if (el.required) el.dataset.wasRequired = "true";
-                  el.required = false;
-                }
-              });
-            }
-
-            function setRole(role) {
-              buttons.forEach(b => b.classList.remove('active'));
-              document.querySelector(`.role-toggle .role[data-role="${role}"]`).classList.add('active');
-
-              hiddenRole.value = role;
-
-              // hide all
-              farmer.classList.add('hidden');
-              drone.classList.add('hidden');
-              business.classList.add('hidden');
-              toggleRequired(farmer, false);
-              toggleRequired(drone, false);
-              toggleRequired(business, false);
-
-              // show & enable required for selected
-              if (role === 'farmer') {
-                farmer.classList.remove('hidden');
-                toggleRequired(farmer, true);
-              }
-              if (role === 'drone') {
-                drone.classList.remove('hidden');
-                toggleRequired(drone, true);
-              }
-              if (role === 'business') {
-                business.classList.remove('hidden');
-                toggleRequired(business, true);
-              }
-            }
-
-            buttons.forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
-            setRole('farmer'); // default
-          })();
-
-          // Sub-event dropdown logic
-          (function () {
-            const eventType = document.getElementById('eventType');
-            const subEventType = document.getElementById('subEventType');
-
-            const subEvents = {
-              political: ["Banner Lifting", "Flower Dropping", "Both"],
-              temple: ["Flower Dropping", "Spraying Service", "Both"],
-              marriage: ["Banner Lifting", "Flower Dropping", "Both"]
-            };
-
-            eventType.addEventListener('change', () => {
-              const selected = eventType.value;
-              subEventType.innerHTML = '<option value="">-- Select Sub Event --</option>';
-              if (subEvents[selected]) {
-                subEvents[selected].forEach(sub => {
-                  const opt = document.createElement('option');
-                  opt.value = sub.toLowerCase().replace(/\s+/g, "_");
-                  opt.textContent = sub;
-                  subEventType.appendChild(opt);
+              // utility to toggle required attributes inside a container
+              function toggleRequired(container, enable) {
+                const inputs = container.querySelectorAll('input, select, textarea');
+                inputs.forEach(el => {
+                  if (enable) {
+                    if (el.dataset.wasRequired === "true") el.required = true;
+                  } else {
+                    if (el.required) el.dataset.wasRequired = "true";
+                    el.required = false;
+                  }
                 });
               }
-            });
-          })();
-        </script>
+
+              function setRole(role) {
+                buttons.forEach(b => b.classList.remove('active'));
+                document.querySelector(`.role-toggle .role[data-role="${role}"]`).classList.add('active');
+
+                hiddenRole.value = role;
+
+                // hide all
+                farmer.classList.add('hidden');
+                drone.classList.add('hidden');
+                business.classList.add('hidden');
+                toggleRequired(farmer, false);
+                toggleRequired(drone, false);
+                toggleRequired(business, false);
+
+                // show & enable required for selected
+                if (role === 'farmer') {
+                  farmer.classList.remove('hidden');
+                  toggleRequired(farmer, true);
+                }
+                if (role === 'drone') {
+                  drone.classList.remove('hidden');
+                  toggleRequired(drone, true);
+                }
+                if (role === 'business') {
+                  business.classList.remove('hidden');
+                  toggleRequired(business, true);
+                }
+              }
+
+              buttons.forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
+              setRole('farmer'); // default
+            })();
+
+            // Sub-event dropdown logic
+            (function () {
+              const eventType = document.getElementById('eventType');
+              const subEventType = document.getElementById('subEventType');
+
+              const subEvents = {
+                political: ["Banner Lifting", "Flower Dropping", "Both"],
+                temple: ["Flower Dropping", "Spraying Service", "Both"],
+                marriage: ["Banner Lifting", "Flower Dropping", "Both"]
+              };
+
+              eventType.addEventListener('change', () => {
+                const selected = eventType.value;
+                subEventType.innerHTML = '<option value="">-- Select Sub Event --</option>';
+                if (subEvents[selected]) {
+                  subEvents[selected].forEach(sub => {
+                    const opt = document.createElement('option');
+                    opt.value = sub.toLowerCase().replace(/\s+/g, "_");
+                    opt.textContent = sub;
+                    subEventType.appendChild(opt);
+                  });
+                }
+              });
+            })();
+          </script>
+        </div>
 
         <div class="card">
           <h3>Contact</h3>
           <p class="sub">KARTHICK SELVARAJ<br>📞 63834 37773<br>✉️ contact@agridirect.com</p>
-          <h3 style="margin-top:12px">Service Areas</h3>
-          <p class="sub">Tamil Nadu • Kerala • Karnataka • AndraPradesh</p>
-          <h3 style="margin-top:12px">Working Hours</h3>
-          <p class="sub">7:00 AM – 7:00 PM, All days</p>
-        </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.7677276875947!2d77.68300117480214!3d10.593561689544286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9ef002fa25faf%3A0x4126bb057c981f8d!2sAgri%20direct%20india!5e1!3m2!1sen!2sin!4v1756117334075!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          
+          <div class="grid-2">
+            <div>
+              <h3 style="margin-top:12px">Service Areas</h3>
+              <p class="sub">Tamil Nadu • Kerala • Karnataka • AndraPradesh</p>
+            </div>
+            <div>
+              <h3 style="margin-top:12px">Working Hours</h3>
+              <p class="sub">7:00 AM – 7:00 PM, All days</p>
+            </div>
+          </div>
       </div>
     </div>
   </section>
@@ -452,10 +485,7 @@
 
     <!-- Footer Content (Split into two columns) -->
     <div class="footer-main">
-      <!-- Left Section -->
-      <div class="footer-left">
-        <!-- Logo -->
-
+      <div class="footer-nav">
         <!-- Navigation Links -->
         <div class="footer-links">
           <a href="#">Home</a>
@@ -478,11 +508,38 @@
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
+        
+      <!-- Left Section -->
+      <!-- <div class="footer-left"> -->
+        <!-- Logo -->
+
+        <!-- Navigation Links -->
+        <!-- <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#">Farmers</a>
+          <a href="#">Drone Partner</a>
+          <a href="#">About</a>
+        </div> -->
+
+        <!-- Policy Links -->
+        <!-- <div class="footer-policies">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Refund and Cancellation Policy</a>
+        </div> -->
+
+        <!-- Social Icons -->
+        <!-- <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div> -->
+      <!-- </div> -->
 
       <!-- Right Section (Google Map) -->
-      <div class="footer-right">
+      <!-- <div class="footer-right">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.7677276875947!2d77.68300117480214!3d10.593561689544286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9ef002fa25faf%3A0x4126bb057c981f8d!2sAgri%20direct%20india!5e1!3m2!1sen!2sin!4v1756117334075!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      </div> -->
     </div>
 
     <!-- Copyright -->
@@ -494,12 +551,35 @@
 
   <script>
     // Modal: show on load
+    /*
     window.addEventListener('DOMContentLoaded', function () {
       const modal = document.getElementById('popup');
       const connect = document.getElementById('connectBtn');
       const closeBtn = document.getElementById('closePopup');
       if (modal) { modal.style.display = 'flex'; }
       function go() { modal.style.display = 'none'; document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }
+      connect && connect.addEventListener('click', go);
+      closeBtn && closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    });
+    */
+
+    window.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('popup');
+      const connect = document.getElementById('connectBtn');
+      const closeBtn = document.getElementById('closePopup');
+      
+      if (modal) { 
+        // Show popup after 15 seconds
+        setTimeout(() => {
+          modal.style.display = 'flex';
+        }, 15000);
+      }
+      
+      function go() { 
+        modal.style.display = 'none'; 
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); 
+      }
+      
       connect && connect.addEventListener('click', go);
       closeBtn && closeBtn.addEventListener('click', () => modal.style.display = 'none');
     });

@@ -254,6 +254,7 @@ h2 {
 }
 
 .features,
+.grid-4,
 .grid-3,
 .grid-2,
 .steps {
@@ -263,6 +264,10 @@ h2 {
 
 .features {
     grid-template-columns: repeat(3, 1fr)
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr)
 }
 
 .grid-3 {
@@ -343,6 +348,17 @@ h2 {
     font-size: 18px;
     margin: 0;
     color: #fff;
+}
+
+.how-it-works {
+    text-align: center;
+}
+
+.how-it-works img {
+    border-radius:14px;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    padding:3em;
 }
 
 /* Timeline */
@@ -542,6 +558,10 @@ footer {
         grid-template-columns: 1fr
     }
 
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
     .features,
     .grid-3,
     .steps {
@@ -559,6 +579,7 @@ footer {
     }
 
     .features,
+    .grid-4,
     .grid-3,
     .steps {
         grid-template-columns: 1fr
@@ -599,7 +620,7 @@ footer {
 
 .footer-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
