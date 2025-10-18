@@ -581,6 +581,7 @@ footer {
     .features,
     .grid-4,
     .grid-3,
+    .grid-2,
     .steps {
         grid-template-columns: 1fr
     }
