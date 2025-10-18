@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Agri Direct India</title>
+  <script defer>
+    if (window.location.hostname.startsWith('www.')) {
+      window.location.replace('https://' + window.location.hostname.slice(4) + window.location.pathname);
+    }
+    if (window.location.pathname.endsWith('.html')) {
+      window.location.replace(window.location.pathname.slice(0, -5));
+    }
+  </script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/icon-192x192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
