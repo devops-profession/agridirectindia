@@ -355,10 +355,13 @@ h2 {
 }
 
 .how-it-works img {
-    border-radius:14px;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    padding:3em;
+    border-radius: 14px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    max-width: 8em;
 }
 
 /* Timeline */
