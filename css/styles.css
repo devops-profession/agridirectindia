@@ -75,7 +75,6 @@ header {
     width: 100px;
     height: 100px;
     object-fit: contain;
-    /* keeps proportions if the image isn’t square */
 }
 
 
@@ -123,7 +122,6 @@ nav a {
     border-color: transparent
 }
 
-/* Add small icon style (minimal, fits cards) */
 .icon {
     width: 42px;
     height: 42px;
@@ -230,6 +228,37 @@ h1 {
     font-size: .95rem
 }
 
+.title-section {
+  background: linear-gradient(to right, #e8fce8, #dffadf);
+  text-align: center;
+}
+
+.subtitle{
+  --bs-text-opacity: 1;
+  color: rgb(33 37 41 / 75%)
+}
+
+.highlight {
+  --bs-text-opacity: 1;
+  color: rgb(25 135 84);
+}
+
+.badge-box {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.bg-light-green {
+  background-color: #f0fff4;
+}
+
+.contact-section {
+  background-color: #2ea44f;
+}
+
 /* Sections */
 section {
     padding: 56px 0
@@ -328,11 +357,8 @@ h2 {
 
 .stats-section .stat {
     background: none;
-    /* removes card background */
     border: none;
-    /* removes border */
     box-shadow: none;
-    /* removes shadow */
     text-align: center;
     padding: 0;
 }
@@ -431,7 +457,6 @@ h2 {
     color: var(--brand);
 }
 
-/* Removed bullets from pricing lists */
 .price ul {
     margin: 10px 0;
     padding-left: 0;
@@ -461,6 +486,228 @@ summary::-webkit-details-marker {
     display: none
 }
 
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Blogs */
+.blog-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.blog-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: center;
+}
+.blog-head {
+  background: linear-gradient(to right, #e8fce8, #dffadf);
+  text-align: center;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-image-wrapper {
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-shrink: 0;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%);
+    transition: clip-path 0.4s ease, transform 0.4s ease;
+}
+
+.blog-card:hover .blog-image {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 100% 90%, 100% 100%, 0% 100%, 0% 90%, 0% 10%);
+    transform: scale(1.05);
+}
+
+.blog-meta {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.category-tag {
+    display: inline-block;
+    background: #b3ffb3;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    flex-grow: 1;
+}
+
+.read-more {
+    font-size: 1rem;
+    color: #555;
+    text-decoration: none;
+    align-self: flex-start;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.read-more:hover {
+    border-bottom: 1px solid #333;
+}
+
+.view-more {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.meta {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.blog-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.blog-content h2 {
+    font-size: 1.5rem;
+    margin: 30px 0 15px;
+}
+
+.blog-content h3 {
+    font-size: 1.2rem;
+    color: #27ae60;
+    margin: 30px 0 15px;
+}
+
+.blog-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.blog-content ul {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.blog-content ul li {
+    margin-bottom: 10px;
+}
+
+.blog-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1rem;
+    display: block;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #27ae60;
+}
+
+.sidebar ul li.current a {
+    color: #27ae60;
+    font-weight: bold;
+    border-left: 4px solid #27ae60;
+    padding-left: 12px;
+}
+
 /* Contact */
 form {
     display: grid;
@@ -488,7 +735,7 @@ select {
     color: var(--text);
     font-family: inherit;
     font-size: 1rem;
-    appearance: none; /* removes browser default arrow */
+    appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
     background-repeat: no-repeat;
     background-position: right 14px center;
@@ -556,7 +803,20 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
     .hero-grid {
         grid-template-columns: 1fr
     }
@@ -574,6 +834,23 @@ footer {
     .stats {
         grid-template-columns: 1fr 1fr
     }
+    .blog-section h2 {
+        font-size: 1rem;
+    }
+    .blog-grid {
+        gap: 50px 30px;
+    }
+    .blog-title {
+        font-size: 1.4rem;
+    }
+    
+    .blog-content {
+        padding: 30px 20px;
+    }
+    
+    .blog-content h2 {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -588,34 +865,6 @@ footer {
     .steps {
         grid-template-columns: 1fr
     }
-}
-
-/* ------------------------- */
-/* ABOUT US PAGE EXTRA STYLES */
-/* ------------------------- */
-
-/* About Section */
-.about-section {
-    background: linear-gradient(to right, #e8fce8, #dffadf);
-}
-
-/* Badge Box for Years of Excellence */
-.badge-box {
-    position: absolute;
-    bottom: -15px;
-    right: 20px;
-    padding: 15px;
-    text-align: center;
-}
-
-/* Light green cards for core values */
-.bg-light-green {
-    background-color: #f0fff4;
-}
-
-/* Contact Section */
-.contact-section {
-    background-color: #2ea44f;
 }
 
 /* ------------------------- */
