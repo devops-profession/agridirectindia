@@ -807,10 +807,6 @@ footer {
     .main-layout {
         grid-template-columns: 1fr;
     }
-    
-    .sidebar {
-        order: -1;
-    }
 }
 
 @media (max-width: 768px) {
