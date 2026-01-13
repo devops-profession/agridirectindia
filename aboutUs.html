@@ -29,16 +29,36 @@
         <img class="logo-img" src="./assets/logo.jpeg" alt="">
         Agri Direct India
       </a>
-      <nav class="nav-links">
-        <!-- Added About link (no other nav changes) -->
-        <a href="./aboutUs.html">About</a>
+
+      <!-- Primary menu -->
+      <nav class="nav-links desktop-nav">
+        <a href="#">About</a>
         <a href="./#services">Services</a>
         <a href="./#solutions">Solutions</a>
         <a href="./#pricing">Pricing</a>
         <a href="./#faq">FAQ</a>
         <a href="./blog">Blogs</a>
         <a href="./#contact" class="btn">Contact</a>
-        <a href="./#book" class="btn brand">Book a Spray</a>
+        <a href="./#contact" class="btn brand">Book a Spray</a>
+      </nav>
+
+      <!-- Mobile toggle button -->
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Mobile menu (hidden by default) -->
+      <nav class="nav-links mobile-nav">
+        <a href="#">About</a>
+        <a href="./#services">Services</a>
+        <a href="./#solutions">Solutions</a>
+        <a href="./#pricing">Pricing</a>
+        <a href="./#faq">FAQ</a>
+        <a href="./blog">Blogs</a>
+        <a href="./#contact" class="btn">Contact</a>
+        <a href="./#contact" class="btn brand">Book a Spray</a>
       </nav>
     </div>
   </header>
@@ -183,7 +203,7 @@
   <footer class="footer">
     <!-- CTA Section -->
     <h2>Unlock your farming potential.<br>Begin your journey now!</h2>
-    <a href="./index.html#contact" class="cta-button">Get A Callback</a>
+    <a href="./#contact" class="cta-button">Get A Callback</a>
 
     <!-- Footer Content (Split into two columns) -->
     <div class="footer-main">
@@ -196,7 +216,7 @@
           <a href="./">Home</a>
           <a href="#">Farmers</a>
           <a href="#">Drone Partner</a>
-          <a href="./aboutUs.html">About</a>
+          <a href="#">About</a>
         </div>
 
         <!-- Policy Links -->

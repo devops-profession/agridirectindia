@@ -28,20 +28,39 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header>
     <div class="container nav">
       <a class="logo" href="./../">
         <img class="logo-img" src="./../assets/logo.jpeg" alt="">
         Agri Direct India
       </a>
-      <nav class="nav-links">
-        <!-- Added About link (no other nav changes) -->
+
+      <!-- Primary menu -->
+      <nav class="nav-links desktop-nav">
         <a href="./../aboutUs.html">About</a>
-        <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="./#services">Services</a>
+        <a href="./#solutions">Solutions</a>
+        <a href="./#pricing">Pricing</a>
+        <a href="./#faq">FAQ</a>
+        <a href="./">Blogs</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="btn brand">Book a Spray</a>
+      </nav>
+
+      <!-- Mobile toggle button -->
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Mobile menu (hidden by default) -->
+      <nav class="nav-links mobile-nav">
+        <a href="./../aboutUs.html">About</a>
+        <a href="./#services">Services</a>
+        <a href="./#solutions">Solutions</a>
+        <a href="./#pricing">Pricing</a>
+        <a href="./#faq">FAQ</a>
         <a href="./">Blogs</a>
         <a href="#contact" class="btn">Contact</a>
         <a href="#contact" class="btn brand">Book a Spray</a>
