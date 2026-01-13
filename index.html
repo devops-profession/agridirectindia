@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Agri Direct India — Precision Agriculture Drone Spraying</title>
   <link rel="canonical" href="https://agridirectindia.com/">
-  <script defer>
+  <!--<script defer>
     if (window.location.hostname.startsWith('www.')) {
       window.location.replace('https://' + window.location.hostname.slice(4) + window.location.pathname);
     }
     if (window.location.pathname.endsWith('.html')) {
       window.location.replace(window.location.pathname.slice(0, -5));
     }
-  </script>
+  </script>-->
   <meta name="description"
     content="Drone spraying services for precision agriculture: faster, safer, uniform application across crops. Book certified pilots across Tamil Nadu & beyond." />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -24,7 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Icons for cards -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/styles.min.css">
+  <!--<link rel="stylesheet" href="./css/styles.min.css">-->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -35,8 +36,9 @@
         <img class="logo-img" src="./assets/logo.jpeg" alt="">
         Agri Direct India
       </a>
-      <nav class="nav-links">
-        <!-- Added About link (no other nav changes) -->
+
+      <!-- Primary menu -->
+      <nav class="nav-links desktop-nav">
         <a href="./aboutUs.html">About</a>
         <a href="#services">Services</a>
         <a href="#solutions">Solutions</a>
@@ -45,6 +47,25 @@
         <a href="#blog">Blogs</a>
         <a href="#contact" class="btn">Contact</a>
         <a href="#contact" class="btn brand">Book a Spray</a>
+      </nav>
+
+      <!-- Mobile toggle button -->
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Mobile menu (hidden by default) -->
+      <nav class="nav-links mobile-nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="btn brand">Book an appointment</a>
       </nav>
     </div>
   </header>
