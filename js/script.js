@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close menu when clicking outside (on the overlay area)
+  /*
   mobileNav.addEventListener('click', (e) => {
     if (e.target === mobileNav) {
       menuBtn.classList.remove('active');
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   });
+  */
 });
 
 // Set year dynamically in footer
