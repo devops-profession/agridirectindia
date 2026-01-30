@@ -586,7 +586,7 @@ tr:nth-child(even) {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 60px 40px;
     max-width: 1400px;
     margin: 0 auto;
@@ -716,6 +716,25 @@ tr:nth-child(even) {
     display: block;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+.checkmark-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checkmark-list li {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.checkmark-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: green;
+    font-weight: bold;
+}
+
 
 /* Sidebar */
 .sidebar {
