@@ -45,12 +45,16 @@ img {
     padding: clamp(16px, 2vw, 24px)
 }
 
+.container.nav {
+    padding: clamp(8px, 1vw, 12px)
+}
+
 /* Header */
 header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(246, 245, 243, 0.85);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(0, 0, 0, .08);
 }
@@ -64,17 +68,40 @@ header {
 
 .logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
     font-weight: 700;
     letter-spacing: .4px;
     color: var(--brand);
 }
 
 .logo-img {
-    width: 100px;
-    height: 100px;
     object-fit: contain;
+    width: 100px;
+    height: 60px;
+}
+
+.brand-name {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap:3px;
+    width: 100%;
+    font-size: 8px;
+    color: #06270e;
+    text-transform: uppercase;
+}
+
+.brand-name::before,
+.brand-name::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #333333;
+}
+
+.word-middle {
+    color: #e38500;
 }
 
 
